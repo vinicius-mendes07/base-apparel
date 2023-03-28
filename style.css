@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    max-width: 1600px;
+}
+
+.text-container{
+    background-image: url(./images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-wrapper{
+    width: 60%;
+    height: 90%;
+    padding-right: 6rem;
+    padding-top: 2rem;
+}
+
+.logo{
+    margin-bottom: 5rem;
+}
+
+.title{
+    font-size: 4rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.were{
+    color: hsl(0, 36%, 70%);
+    font-weight: 300;
+    font-size: 4rem;
+}
+
+.description{
+    color: hsl(0, 36%, 70%);
+    line-height: 1.6em;
+    margin-bottom: 1.5rem;
+}
+
+#form{
+    position: relative;
+    border-radius: 2rem;
+}
+
+#email{
+    width: 100%;
+    border-radius: 2rem;
+    padding: 15px 25px;
+    border: 1px solid hsla(0, 36%, 70%, 0.5);
+}
+
+#email::placeholder{
+    color: hsla(0, 36%, 70%, 0.5);
+}
+
+#email:focus{
+    box-shadow: 0;
+    outline: none;
+}
+
+.btn{
+    position: absolute;
+    right: 0;
+    padding: 12px 35px;
+    background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    border: none;
+    border-radius: 2rem;
+    box-shadow: 1px 10px 15px 2px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-image: linear-gradient(135deg, hsl(0, 76%, 92%), hsl(0, 83%, 93%));
+    padding: 13px 35px;
+}
+
+#message{
+    color: hsl(0, 93%, 68%);
+    padding-left: 25px;
+    padding-top: 10px;
+    font-size: 13px;
+    visibility: hidden;
+}
+
+.hero-desktop{
+    height: 100vh;
+}
+
+.hero-mobile{
+    display: none;
+}
+
+@media (max-width: 1176px){
+    .title, .were{
+        font-size: 3rem;
+    }
+
+    .title, .description{
+        margin-bottom: 2rem;
+    }
+    .text-wrapper{
+        padding: 0;
+    }
+    .hero-desktop{
+        width: 50%;
+    }
+}
+
+@media (max-width: 800px) {
+    .title, .were{
+        font-size: 2rem;
+    }
+
+    .title, .description{
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .hero-desktop{
+        display: none;
+    }
+    .hero-mobile{
+        display: inline-block;
+        width: 100%;
+        margin-bottom: 3rem;
+    }
+    .text-wrapper{
+        width: 70%;
+        height: 100%;
+    }
+    .logo{
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 600px){
+    .text-wrapper{
+        width: 100%;
+    }
+    .logo{
+        margin-left: 2rem;
+    }
+
+    .text-main{
+        padding: 0 1rem 1rem 1rem;
+    }
+}
